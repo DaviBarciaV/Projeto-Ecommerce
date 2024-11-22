@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TechStore / E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="menu">
+            <img src="Tech Shop.png" width="80px"
+            height="80px" alt="">
+
+            <div class="input-container">
+                <span class="input-icon" href="/">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" id="search-bar" placeholder="Buscar produtos...">
+            </div>
+
+            <div class="icons">
+                <i class="fa-solid fa-cart-shopping" id="ic-cart"></i>
+                <p id="quantidade"  style="font-size: larger; margin-right: 10px; color: white;">(0)</p>
+                <i class="fa-solid fa-bars" alt="" id="icon-menu"></i>
+            </div>
+        </div>
+            <nav class="navbar-lists">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="/">Home
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/">Categorias
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/">Sobre
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/">Contato
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <header id="cabeçalho">
+        <div class="session">
+           <div class="session-side">
+              <div class="session-left">
+                 <h2>O melhor da tecnologia você só encontra aqui, na Techshop!</h2>
+                 <p>
+                    De vez em quando, uma nova tecnologia, um antigo problema e uma grande ideia se convertem em uma inovação.
+                 </p>
+              </div>
+              <div class="session-right">
+                   <img src="homem-notebook.png" alt="">
+              </div>
+           </div>
+        </div>
+    </header>
+
+    <div class="product-bar" style="text-align: center;margin-top:20px ;">
+        <h1>Produtos</h1>
+        <div class="product-strip"></div>
+    </div>
+
+    <div id="produtos">
+
+        <div id="no-results" style="text-align: center; display: none; font-size: 1.2em; color: red;padding: 50px;">
+            Ops! Nenhum resultado foi encontrado :(
+        </div>
+        
+        <div class="cell-left">
+
+            <div class="cell">
+                <img src="ip-16.png" alt="" class="celular"> 
+                <div style="font-weight: bold;"> <p>Iphone 16</p> <p>R$6700,00</p></div>
+                <img src="adicionar-produto.png" alt="" class="add-carrinho" data-name="Iphone 16" data-price="6700" >
+                   
+            </div>
+            <div class="cell">
+                <img src="iphone14-removebg-preview.png" alt="" class="celular">
+                <div style="font-weight: bold;" > <p>Iphone 14</p> <p>R$4000,00</p></div>
+                <img src="adicionar-produto.png" alt="" class="add-carrinho" data-name="Iphone 14" data-price="4000"  >
+            </div>
+            
+        </div>
+
+        <div class="cell-right">
+
+            <div class="cell">
+                <img src="Apple_iphone13_hero_geo_09142021_inline.jpg.large-removebg-preview.png" alt="" class="celular"> 
+                <div style="font-weight: bold;"> <p>Iphone 13</p> <p>R$3500,00</p></div>
+                <img src="adicionar-produto.png" alt="" class="add-carrinho" data-name="Iphone 13" data-price="3500">
+            </div>
+
+            <div class="cell">
+                <img src="ip-15-removebg-preview.png" alt="" width="" class="celular">
+                <div style="font-weight: bold;"> <p>Iphone 15</p> <p>R$4600,00</p></div>
+                <img src="adicionar-produto.png" alt="" class="add-carrinho" data-name="Iphone 15" data-price="4600">
+            </div>
+
+        </div>
+    </div>
+    <footer class="rodape">
+        <ul class="rodape-list">
+            <li class="rodape-item">
+                <a href="">Condições de Uso</a>
+            </li>
+            <li class="rodape-item">
+                <a href="">Notificação de Privacidade</a>
+            </li>
+            <li class="rodape-item">
+                <a href="">Cookies</a>
+            </li>
+            <li class="rodape-item">
+                <a href="">Anúncios Baseados em Interesses</a>
+            </li>
+            <li class="rodape-item">
+                ©️ 2021-2024 Techshop.com, Inc. ou suas afiliadas
+            </li>
+            <li class="rodape-item">
+                <img src="Tech Shop.png" alt="Techshop" width="100px" height="100px">
+            </li>
+        </ul>
+    </footer>
+
+
+    <!------------------------------------------------------------------------MODAL------------------------------------------------------------------------>
+    <div id="modal-cart">
+        <div id="meucarrinho">
+            <h2 style="text-align: center;">Meu carrinho</h2>
+
+            <div id="cart-items"></div>
+
+            <p style="font-weight: bold;">Total: <span  id="total">0.00</span></p>
+
+            <form action="data.php" method="POST">
+                <p>Endereço de entrega: </p>
+                <input type="text" name="endereco" id="address" placeholder="Digite seu endereço completo...">
+
+                <div style="display: flex;align-items: center;justify-content: space-between;">
+                    <button type="button" id="close-modal-botao">Fechar</button>
+                    <input type="submit" id="finalizar-pedido" value="Finalizar Pedido">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
